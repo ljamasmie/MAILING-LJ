@@ -227,12 +227,11 @@ tr:last-child td{border-bottom:none;}tr.clickable:hover{background:var(--ap-purp
 <script>
 /* ===== DATOS MAESTROS con tiempo de respuesta real en horas ===== */
 const ALL = [
-  /* s=semana, c=cliente, t=tipo, out=enviado(1)/recibido(0), resp=horas_respuesta(-1 sin respuesta) */
+  /* ── SEMANA 4 (23-25 jun) ── recibidos */
   {s:4,c:'Assurant',t:'Gift cards',out:0,resp:0.5},
   {s:4,c:'Assurant',t:'Facturacion',out:0,resp:1.2},
   {s:4,c:'Assurant',t:'Cotizaciones',out:0,resp:0.25},
   {s:4,c:'Assurant',t:'Cotizaciones',out:0,resp:1.0},
-  {s:4,c:'Assurant',t:'Cotizaciones',out:1,resp:-1},
   {s:4,c:'Cidef',t:'Carga de puntos',out:0,resp:0.3},
   {s:4,c:'Cidef',t:'Facturacion',out:0,resp:1.5},
   {s:4,c:'Cidef',t:'Gift cards',out:0,resp:0.4},
@@ -252,6 +251,25 @@ const ALL = [
   {s:4,c:'MAPFRE',t:'Gift cards',out:0,resp:-1},
   {s:4,c:'Grupo Insurex',t:'Carga de puntos',out:0,resp:1.2},
   {s:4,c:'Sergio Escobar',t:'Carga de puntos',out:0,resp:0.4},
+  /* ── SEMANA 4 enviados (reales de Gmail) ── */
+  {s:4,c:'Assurant',t:'Cotizaciones',out:1,resp:-1},
+  {s:4,c:'Assurant',t:'Cotizaciones',out:1,resp:-1},
+  {s:4,c:'Assurant',t:'Gift cards',out:1,resp:-1},
+  {s:4,c:'Natura',t:'Carga de puntos',out:1,resp:-1},
+  {s:4,c:'Natura',t:'Carga de puntos',out:1,resp:-1},
+  {s:4,c:'Natura',t:'Soporte / desbloqueo',out:1,resp:-1},
+  {s:4,c:'Cidef',t:'Carga de puntos',out:1,resp:-1},
+  {s:4,c:'Cidef',t:'Facturacion',out:1,resp:-1},
+  {s:4,c:'ManpowerGroup',t:'Cotizaciones',out:1,resp:-1},
+  {s:4,c:'Tanner',t:'Facturacion',out:1,resp:-1},
+  {s:4,c:'Rubicar',t:'Soporte / desbloqueo',out:1,resp:-1},
+  {s:4,c:'Difor',t:'Facturacion',out:1,resp:-1},
+  {s:4,c:'Grupo Insurex',t:'Carga de puntos',out:1,resp:-1},
+  {s:4,c:'Sergio Escobar',t:'Carga de puntos',out:1,resp:-1},
+  {s:4,c:'BG Chile',t:'Soporte / desbloqueo',out:1,resp:-1},
+  {s:4,c:'HDI Seguros',t:'Reuniones',out:1,resp:-1},
+  {s:4,c:'Entel',t:'Carga de puntos',out:1,resp:-1},
+  /* ── SEMANA 3 (16-22 jun) ── recibidos */
   {s:3,c:'Verisure',t:'Carga de puntos',out:0,resp:1.5},
   {s:3,c:'ManpowerGroup',t:'Cotizaciones',out:0,resp:1.0},
   {s:3,c:'Natura',t:'Carga de puntos',out:0,resp:0.3},
@@ -278,6 +296,26 @@ const ALL = [
   {s:3,c:'BSG Global',t:'Carga de puntos',out:0,resp:0.4},
   {s:3,c:'Full Garantia',t:'Carga de puntos',out:0,resp:0.8},
   {s:3,c:'Grupo Antumalal',t:'Carga de puntos',out:0,resp:1.2},
+  /* ── SEMANA 3 enviados ── */
+  {s:3,c:'Verisure',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'ManpowerGroup',t:'Cotizaciones',out:1,resp:-1},
+  {s:3,c:'Natura',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'HDI Seguros',t:'Soporte / desbloqueo',out:1,resp:-1},
+  {s:3,c:'Licencias OnLine',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'Soprole',t:'Consultas operativas',out:1,resp:-1},
+  {s:3,c:'ManpowerGroup',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'Cidef',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'AFP Habitat',t:'Reuniones',out:1,resp:-1},
+  {s:3,c:'Assurant',t:'Gift cards',out:1,resp:-1},
+  {s:3,c:'Entel',t:'Gift cards',out:1,resp:-1},
+  {s:3,c:'Difor',t:'Facturacion',out:1,resp:-1},
+  {s:3,c:'Santa Rita',t:'Gift cards',out:1,resp:-1},
+  {s:3,c:'BSG Global',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'Full Garantia',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'Novo Nordisk',t:'Cotizaciones',out:1,resp:-1},
+  {s:3,c:'Grupo Antumalal',t:'Carga de puntos',out:1,resp:-1},
+  {s:3,c:'Assurant',t:'Soporte / desbloqueo',out:1,resp:-1},
+  /* ── SEMANA 2 (9-15 jun) ── recibidos */
   {s:2,c:'Difor',t:'Carga de puntos',out:0,resp:1.5},
   {s:2,c:'Natura',t:'Carga de puntos',out:0,resp:0.3},
   {s:2,c:'Entel',t:'Carga de puntos',out:0,resp:0.6},
@@ -296,6 +334,20 @@ const ALL = [
   {s:2,c:'Talana',t:'Facturacion',out:0,resp:1.0},
   {s:2,c:'Interandinos',t:'Cotizaciones',out:0,resp:0.9},
   {s:2,c:'Luxottica',t:'Cotizaciones',out:0,resp:0.5},
+  /* ── SEMANA 2 enviados ── */
+  {s:2,c:'Difor',t:'Carga de puntos',out:1,resp:-1},
+  {s:2,c:'Natura',t:'Carga de puntos',out:1,resp:-1},
+  {s:2,c:'Assurant',t:'Gift cards',out:1,resp:-1},
+  {s:2,c:'ManpowerGroup',t:'Cotizaciones',out:1,resp:-1},
+  {s:2,c:'Licencias OnLine',t:'Carga de puntos',out:1,resp:-1},
+  {s:2,c:'Cidef',t:'Soporte / desbloqueo',out:1,resp:-1},
+  {s:2,c:'Entel',t:'Reuniones',out:1,resp:-1},
+  {s:2,c:'HDI Seguros',t:'Reuniones',out:1,resp:-1},
+  {s:2,c:'Talana',t:'Facturacion',out:1,resp:-1},
+  {s:2,c:'Interandinos',t:'Cotizaciones',out:1,resp:-1},
+  {s:2,c:'Luxottica',t:'Cotizaciones',out:1,resp:-1},
+  {s:2,c:'Difor',t:'Facturacion',out:1,resp:-1},
+  /* ── SEMANA 1 (28 may-8 jun) ── recibidos */
   {s:1,c:'Natura',t:'Carga de puntos',out:0,resp:0.5},
   {s:1,c:'Assurant',t:'Gift cards',out:0,resp:1.2},
   {s:1,c:'Cidef',t:'Carga de puntos',out:0,resp:0.4},
@@ -313,7 +365,20 @@ const ALL = [
   {s:1,c:'Licencias OnLine',t:'Carga de puntos',out:0,resp:2.2},
   {s:1,c:'Soprole',t:'Consultas operativas',out:0,resp:1.0},
   {s:1,c:'Grupo Antumalal',t:'Gift cards',out:0,resp:0.7},
-  {s:1,c:'AFP Habitat',t:'Reuniones',out:0,resp:0.7}
+  {s:1,c:'AFP Habitat',t:'Reuniones',out:0,resp:0.7},
+  /* ── SEMANA 1 enviados ── */
+  {s:1,c:'Natura',t:'Carga de puntos',out:1,resp:-1},
+  {s:1,c:'Assurant',t:'Gift cards',out:1,resp:-1},
+  {s:1,c:'Cidef',t:'Carga de puntos',out:1,resp:-1},
+  {s:1,c:'ManpowerGroup',t:'Cotizaciones',out:1,resp:-1},
+  {s:1,c:'Licencias OnLine',t:'Carga de puntos',out:1,resp:-1},
+  {s:1,c:'HDI Seguros',t:'Gift cards',out:1,resp:-1},
+  {s:1,c:'Entel',t:'Gift cards',out:1,resp:-1},
+  {s:1,c:'Difor',t:'Reuniones',out:1,resp:-1},
+  {s:1,c:'Soprole',t:'Consultas operativas',out:1,resp:-1},
+  {s:1,c:'Grupo Antumalal',t:'Gift cards',out:1,resp:-1},
+  {s:1,c:'AFP Habitat',t:'Reuniones',out:1,resp:-1},
+  {s:1,c:'Assurant',t:'Soporte / desbloqueo',out:1,resp:-1}
 ];
 
 const PENDING = [
